@@ -26,18 +26,18 @@ import dilipVideo from "../public/dilip video.mp4";
 
 const backgrounds = [bgimg4, bg, bg1, bgimg2, bgimg3];
 const galleryImages = [
-  img1, img3, img7, img8, img9, img11, img12
+  img11, img1, img3, img7, img8, img9,
 ];
 
 const events = [
   { name: "Haldi Ceremony", time: "06 May 2026 • 05:30 PM", location: "Jalna", icon: Sparkles },
   { name: "Wedding Ceremony", time: "07 May 2026 • 12:30 PM", location: "Jalna", icon: Heart },
-  { name: "Reception", time: "08 May 2026 • 08:00 PM", location: "Jalna", icon: Music },
+  // { name: "Reception", time: "08 May 2026 • 08:00 PM", location: "Jalna", icon: Music },
 ];
 
 const contacts = [
   { name: "Sandip Shelke", phone: "+91 9588428417" },
-  { name: "Dnyaneshwar Shelke", phone: "+91 9307750693" },
+  { name: "Yogesh Shelke", phone: "+91 9527047738" },
 ];
 
 export default function App() {
@@ -267,6 +267,7 @@ export default function App() {
         </div>
       </section>
 
+      <br />
       {/* COUNTDOWN SECTION */}
       <section id="countdown" className="relative py-24 md:py-32 bg-[#fcfaf5] overflow-hidden flex flex-col items-center justify-center w-full">
         <div className="w-full max-w-5xl mx-auto px-4 relative z-10 flex flex-col items-center text-center">
@@ -288,20 +289,23 @@ export default function App() {
                 whileInView={{ opacity: 1, scale: 1, y: 0 }}
                 viewport={{ once: false, amount: 0.2 }}
                 transition={{ delay: index * 0.1, duration: 0.6 }}
-                className="bg-white rounded-[2rem] p-6 md:p-10 w-[45%] sm:w-32 md:w-40 flex flex-col items-center justify-center shadow-[0_10px_40px_rgba(0,0,0,0.04)] border border-stone-100"
+                className="bg-[#fcf5e8] rounded-[2.5rem] p-6 md:p-10 w-[45%] sm:w-32 md:w-40 flex flex-col items-center justify-center shadow-[0_15px_45px_rgba(0,0,0,0.05)] border border-[#f5ebdb] hover:border-amber-300 transition-all duration-500 group"
               >
-                <div className="text-4xl md:text-6xl font-light font-serif text-stone-800 mb-2">
+                <div className="text-4xl md:text-6xl font-light font-serif text-amber-600 mb-2 group-hover:scale-110 transition-transform duration-500">
                   {String(value).padStart(2, "0")}
                 </div>
-                <div className="text-[10px] md:text-xs uppercase tracking-[0.2em] text-stone-400 font-semibold">
+                <div className="text-[10px] md:text-xs uppercase tracking-[0.3em] text-stone-500 font-bold">
                   {unit === 'd' ? 'Days' : unit === 'h' ? 'Hours' : unit === 'm' ? 'Mins' : 'Secs'}
                 </div>
               </motion.div>
             ))}
+            <div>_</div>
+
           </div>
         </div>
       </section>
 
+      <br />
       {/* EVENTS SECTION */}
       <section id="events" className="py-24 md:py-32 bg-white relative flex flex-col items-center justify-center w-full border-t border-stone-100">
         <div className="w-full max-w-6xl mx-auto px-4 flex flex-col items-center relative z-10">
@@ -352,7 +356,7 @@ export default function App() {
           </div>
         </div>
       </section>
-
+      <br />
       {/* VIDEO SECTION */}
       <section id="video" className="py-24 md:py-32 bg-[#fcfaf5] relative flex flex-col items-center justify-center w-full overflow-hidden border-t border-stone-100">
         <div className="w-full max-w-5xl mx-auto px-4  sm:px-6 flex flex-col items-center text-center relative z-10">
@@ -363,7 +367,7 @@ export default function App() {
             className="flex flex-col items-center text-center mt-24 md:mt-32 mb-16 md:mb-20 w-full"
           >
             <p className="text-amber-600 uppercase tracking-[0.4em] text-xs font-semibold mb-6 md:mb-8">Our Story</p>
-            <h2 className="text-4xl md:text-5xl font-serif text-stone-800">A Glimpse of Us</h2>
+            <h2 className="text-2xl md:text-5xl font-serif text-stone-800">Engagement Ceremony 💖</h2>
           </motion.div>
 
           <motion.div
@@ -384,7 +388,7 @@ export default function App() {
           </motion.div>
         </div>
       </section>
-
+      <br />
       {/* GALLERY SECTION */}
       <section id="gallery" className="py-24 md:py-32 bg-white relative flex flex-col items-center justify-center w-full border-t border-stone-100">
         <div className="w-full max-w-6xl mx-auto px-4 sm:px-6 flex flex-col items-center">
@@ -406,7 +410,7 @@ export default function App() {
                 whileInView={{ opacity: 1, scale: 1, y: 0 }}
                 viewport={{ once: false, amount: 0.2 }}
                 transition={{ duration: 0.6, delay: (index % 3) * 0.1 }}
-                className="relative group overflow-hidden rounded-2xl shadow-sm hover:shadow-xl transition-all duration-500 w-full bg-stone-100 break-inside-avoid mb-4 md:mb-6"
+                className="relative group overflow-hidden rounded-2xl shadow-sm hover:shadow-xl transition-all duration-500 w-full bg-stone-100 break-inside-avoid mb-16 md:mb-24"
               >
                 <div className="absolute inset-0 bg-stone-900/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10"></div>
                 <img
@@ -422,9 +426,9 @@ export default function App() {
       </section>
 
       {/* LOCATION & CONTACT COMBINED */}
-      <section id="contact" className="py-24 md:py-32 bg-[#fcfaf5] flex flex-col items-center justify-center w-full border-t border-stone-100">
+      <section id="contact" className="pt-24 md:pt-32 pb-40 md:pb-56 bg-[#fcfaf5] flex flex-col items-center justify-center w-full border-t border-stone-100">
         <div className="w-full max-w-6xl mx-auto px-4 flex flex-col items-center text-center">
-
+          <br />
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -433,6 +437,8 @@ export default function App() {
           >
             <p className="text-amber-600 uppercase tracking-[0.4em] text-xs font-semibold mb-6 md:mb-8">Join Us</p>
             <h2 className="text-4xl md:text-5xl font-serif text-stone-800">Venue & Contact</h2>
+            <br />
+
           </motion.div>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 w-full">
@@ -463,42 +469,57 @@ export default function App() {
                   repeat: Infinity,
                   ease: "easeInOut"
                 }}
-                className="mt-12 group relative inline-flex justify-center items-center gap-4 px-12 py-6 bg-gradient-to-r from-amber-600 to-amber-500 text-white font-bold tracking-[0.2em] text-base uppercase rounded-full shadow-[0_10px_30px_rgba(245,158,11,0.3)] hover:shadow-[0_15px_40px_rgba(245,158,11,0.5)] hover:from-amber-700 hover:to-amber-600 transition-all border border-amber-400/50 z-10"
+                className="mt-12 group relative inline-flex justify-center items-center gap-4 px-12 py-8 bg-gradient-to-r from-amber-500 to-amber-900 text-white font-bold tracking-[0.2em] text-base uppercase rounded-full shadow-[0_10px_30px_rgba(245,158,11,0.3)] hover:shadow-[0_15px_40px_rgba(245,158,11,0.5)] hover:from-amber-700 hover:to-amber-600 transition-all border border-amber-400/50 z-10"
               >
-                <div className="absolute inset-0 rounded-full border-2 border-amber-500/50 animate-ping opacity-30"></div>
-                <MapPin size={24} className="animate-bounce" />
+                <div className="absolute inset-0 rounded-md border-2 border-amber-200/20 animate-ping opacity-16"></div>
+                <MapPin size={32} />
                 Get Location
               </motion.a>
             </motion.div>
 
             {/* Contact Cards Container */}
             <motion.div
-              initial={{ opacity: 0, x: 30 }}
-              whileInView={{ opacity: 1, x: 0 }}
+              initial="hidden"
+              whileInView="visible"
               viewport={{ once: false, amount: 0.2 }}
-              className="flex flex-col justify-center gap-6 w-full"
+              variants={staggerContainer}
+              className="flex flex-col justify-center w-full"
             >
-              {contacts.map((contact, index) => (
-                <div key={index} className="bg-white p-8 md:p-10 rounded-[2rem] border border-stone-100 shadow-sm hover:shadow-md transition-shadow duration-300 flex flex-col sm:flex-row items-center sm:justify-between text-center sm:text-left gap-6">
-                  <div>
-                    <p className="text-stone-400 uppercase tracking-[0.2em] text-[10px] font-semibold mb-2">RSVP / Contact</p>
-                    <h3 className="text-2xl font-serif text-stone-800">{contact.name}</h3>
-                  </div>
-
-                  <a
-                    href={`tel:${contact.phone}`}
-                    className="inline-flex justify-center items-center gap-3 text-sm font-bold tracking-[0.1em] text-stone-900 bg-amber-100 hover:bg-amber-200 transition-colors duration-300 px-6 py-4 rounded-full shadow-sm w-full sm:w-auto flex-shrink-0"
+              <motion.h3 variants={fadeUp} className="font-serif text-3xl md:text-4xl text-stone-900 mb-8 text-center sm:text-left drop-shadow-sm">Contact Information</motion.h3>
+              <br />
+              <div className="flex flex-col gap-6">
+                {contacts.map((contact, index) => (
+                  <motion.div
+                    key={index}
+                    variants={{
+                      hidden: { opacity: 0, y: 20 },
+                      visible: { opacity: 1, y: 0, transition: { duration: 0.4, ease: "easeOut" } }
+                    }}
+                    whileHover={{ y: -5, scale: 1.02 }}
+                    className="flex flex-col sm:flex-row items-center sm:justify-between text-center sm:text-left gap-4 p-8 rounded-2xl bg-[#fcf5e8] border border-[#f5ebdb] hover:border-green-200 shadow-sm hover:shadow-lg transition-all duration-300"
                   >
-                    <Phone className="w-4 h-4 text-amber-700" />
-                    {contact.phone}
-                  </a>
-                </div>
-              ))}
+                    <div>
+                      <p className="text-red-600/80 uppercase tracking-[0.2em] text-[10px] font-bold mb-2">RSVP / Contact</p>
+                      <h4 className="text-2xl font-serif text-stone-800">{contact.name}</h4>
+                    </div>
+                    <a
+                      href={`tel:${contact.phone}`}
+                      className="inline-flex justify-center items-center gap-3 text-sm font-semibold tracking-widest text-stone-600 hover:text-green-600 transition-colors duration-300 group/link"
+                    >
+                      <div className="w-10 h-10 rounded-full bg-green-50 flex items-center justify-center border border-green-200 group-hover/link:bg-green-100 group-hover/link:scale-110 transition-all duration-300">
+                        <Phone className="w-4 h-4 text-green-600 group-hover/link:animate-pulse" />
+                      </div>
+                      {contact.phone}
+                    </a>
+                  </motion.div>
+                ))}
+              </div>
             </motion.div>
           </div>
         </div>
       </section>
 
+      <br />
       {/* FOOTER */}
       <footer className="py-32 md:py-48 bg-stone-900 text-center relative flex flex-col items-center justify-center w-full overflow-hidden">
         {/* Subtle Flying Hearts for Professional Look */}
@@ -506,7 +527,7 @@ export default function App() {
           {[...Array(20)].map((_, i) => (
             <motion.div
               key={i}
-              className="absolute bottom-[-50px] text-rose-500/40"
+              className="absolute bottom-[-50px] text-rose-00/40"
               initial={{ y: 0, x: `${Math.random() * 100}vw`, opacity: 0, scale: 0.5 }}
               animate={{
                 y: -1500,
@@ -520,10 +541,11 @@ export default function App() {
                 ease: "linear"
               }}
             >
-              <Heart className="w-8 h-8 sm:w-12 sm:h-12 fill-rose-500/30" />
+              <Heart className="w-8 h-8 sm:w-12 sm:h-12 fill-rose-600/30" />
             </motion.div>
           ))}
         </div>
+
 
         <div className="w-full max-w-4xl mx-auto px-4 flex flex-col items-center text-center relative z-10">
           <motion.div
@@ -533,7 +555,6 @@ export default function App() {
             transition={{ duration: 0.8, type: "spring", bounce: 0.4 }}
             className="mb-8"
           >
-            <Heart className="w-12 h-12 text-amber-500 fill-amber-500/30 mx-auto" />
           </motion.div>
 
           <motion.h2
@@ -541,9 +562,18 @@ export default function App() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: false, amount: 0.2 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="text-5xl md:text-8xl font-serif text-white mb-6"
+            className="text-4xl sm:text-5xl md:text-8xl font-serif text-white mt-[100px] md:mt-[150px] mb-6 flex items-center justify-center gap-4 sm:gap-6 whitespace-nowrap"
           >
-            Dilip <span className="text-amber-500 font-light">&</span> Diksha
+            <br /><br />
+            <span className="text-amber-500">Dilip</span>
+            <motion.span
+              className="text-red-500 font-light flex items-center justify-center"
+              animate={{ opacity: [0.4, 1, 0.4], y: [-8, 8, -8] }}
+              transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
+            >
+              <Heart className="w-8 h-8 md:w-12 md:h-12 text-red-500 fill-red-500" />
+            </motion.span>
+            <span className="text-amber-500">Diksha</span>
           </motion.h2>
 
           <motion.p
@@ -563,9 +593,10 @@ export default function App() {
             transition={{ delay: 0.8, duration: 1 }}
             className="text-stone-500 text-[10px] md:text-xs tracking-[0.5em] font-semibold uppercase relative"
           >
-            <div className="absolute -top-8 left-1/2 -translate-x-1/2 w-24 h-[1px] bg-stone-700"></div>
+            <div className="absolute -top-8 left-1/2 -translate-x-1/2 w-24 h-[1px] bg-stone-600"></div>
             © 2026 • Forever Begins
           </motion.div>
+          <span className="mr-20 text-stone-300">  created by @yogesh_shelke</span>
         </div>
       </footer>
     </div>
