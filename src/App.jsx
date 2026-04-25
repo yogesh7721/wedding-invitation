@@ -19,19 +19,19 @@ import img7 from "../public/img7.png";
 import img8 from "../public/img8.png";
 import img9 from "../public/img9.png";
 import img11 from "../public/img11.png";
-import img12 from "../public/img12.png";
+// import img12 from "../public/img12.png";
 
 // Video
 import dilipVideo from "../public/dilip video.mp4";
 
-const backgrounds = [bgimg4, bg, bg1, bgimg2, bgimg3];
+const backgrounds = [bgimg4, bg, bg1, bgimg2, bgimg3, bgimg4];
 const galleryImages = [
-  img11, img1, img3, img7, img8, img9,
+  mainImg, bgimg2, img1, img3, img7, img8, img9,
 ];
 
 const events = [
-  { name: "Haldi Ceremony", time: "06 May 2026 • 05:30 PM", location: "Jalna", icon: Sparkles },
-  { name: "Wedding Ceremony", time: "07 May 2026 • 12:30 PM", location: "Jalna", icon: Heart },
+  { name: "Haldi Ceremony", time: "06 May 2026 • 05:30 PM", location: "Rui, Tq: Ambad, Dist: Jalna", icon: Sparkles },
+  { name: "Wedding Ceremony", time: "07 May 2026 • 12:30 PM", location: "Ghodegaon, Jalna MH", icon: Heart },
   // { name: "Reception", time: "08 May 2026 • 08:00 PM", location: "Jalna", icon: Music },
 ];
 
@@ -261,7 +261,7 @@ export default function App() {
             <div className="hidden sm:block w-[1px] h-6 bg-white/40"></div>
             <div className="flex items-center justify-center gap-3 text-white">
               <MapPin className="text-amber-400 w-6 h-6 drop-shadow-md" />
-              <span className="font-semibold tracking-[0.2em] text-sm md:text-base drop-shadow-md">JALNA, MH</span>
+              <span className="font-semibold tracking-[0.2em] text-sm md:text-base drop-shadow-md">Ghodegaon, Jalna, MH</span>
             </div>
           </motion.div>
         </div>
@@ -499,7 +499,7 @@ export default function App() {
                     className="flex flex-col sm:flex-row items-center sm:justify-between text-center sm:text-left gap-4 p-8 rounded-2xl bg-[#fcf5e8] border border-[#f5ebdb] hover:border-green-200 shadow-sm hover:shadow-lg transition-all duration-300"
                   >
                     <div>
-                      <p className="text-red-600/80 uppercase tracking-[0.2em] text-[10px] font-bold mb-2">RSVP / Contact</p>
+                      <p className="text-red-600/80 uppercase tracking-[0.2em] text-[10px] font-bold mb-2"> Contact</p>
                       <h4 className="text-2xl font-serif text-stone-800">{contact.name}</h4>
                     </div>
                     <a
