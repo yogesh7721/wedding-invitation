@@ -66,7 +66,7 @@ export default function App() {
     // Background Carousel
     const bgInterval = setInterval(() => {
       setCurrentBg((prev) => (prev + 1) % backgrounds.length);
-    }, 5000);
+    }, 4000);
 
     // Scroll Handler
     const handleScroll = () => {
