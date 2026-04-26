@@ -26,7 +26,7 @@ import dilipVideo from "../public/dilip video.mp4";
 
 const backgrounds = [bgimg4, bg, bg1, bgimg2, bgimg3, bgimg4];
 const galleryImages = [
-  mainImg, bgimg2, img1, img3, img7, img8, img9,
+  mainImg, img1, img3, bgimg4, img7, bgimg2, img8, img9,
 ];
 
 const events = [
@@ -221,7 +221,7 @@ export default function App() {
           >
             <motion.p
               variants={fadeUp}
-              className="text-amber-400 text-xs md:text-sm uppercase tracking-[0.4em] font-semibold mb-6 drop-shadow-md"
+              className="text-amber-400 text-xs md:text-sm uppercase tracking-[0.4em] font-semibold mb-24 drop-shadow-md"
             >
               We Are Getting Married
             </motion.p>
@@ -229,7 +229,7 @@ export default function App() {
             <div className="flex flex-col md:flex-row items-center justify-center gap-2 md:gap-8 w-full leading-none">
               <motion.h1
                 variants={fadeUp}
-                className="text-6xl md:text-8xl lg:text-[140px] font-serif text-white tracking-tight text-center drop-shadow-[0_5px_15px_rgba(0,0,0,0.5)]"
+                className="text-amber-400 text-6xl md:text-8xl lg:text-[140px] font-serif tracking-tight text-center drop-shadow-[0_5px_15px_rgba(0,0,0,0.5)]"
               >
                 Dilip
               </motion.h1>
@@ -241,7 +241,7 @@ export default function App() {
               </motion.span>
               <motion.h1
                 variants={fadeUp}
-                className="text-6xl md:text-8xl lg:text-[140px] font-serif text-white tracking-tight text-center drop-shadow-[0_5px_15px_rgba(0,0,0,0.5)]"
+                className="text-6xl md:text-8xl lg:text-[140px] font-serif text-amber-400 tracking-tight text-center drop-shadow-[0_5px_15px_rgba(0,0,0,0.5)]"
               >
                 Diksha
               </motion.h1>
@@ -255,13 +255,13 @@ export default function App() {
             className="flex flex-col sm:flex-row justify-center items-center gap-6 md:gap-12 mt-12 w-full"
           >
             <div className="flex items-center justify-center gap-3 text-white">
-              <Calendar className="text-amber-400 w-6 h-6 drop-shadow-md" />
-              <span className="font-semibold tracking-[0.2em] text-sm md:text-base drop-shadow-md">07 MAY 2026</span>
+              <Calendar className="text-black w-6 h-6 drop-shadow-md" />
+              <span className="text-black font-semibold tracking-[0.2em] text-sm md:text-base drop-shadow-md">07 MAY 2026</span>
             </div>
             <div className="hidden sm:block w-[1px] h-6 bg-white/40"></div>
             <div className="flex items-center justify-center gap-3 text-white">
-              <MapPin className="text-amber-400 w-6 h-6 drop-shadow-md" />
-              <span className="font-semibold tracking-[0.2em] text-sm md:text-base drop-shadow-md">Ghodegaon, Jalna, MH</span>
+              <MapPin className="text-black w-6 h-6 drop-shadow-md" />
+              <span className="text-black font-semibold tracking-[0.2em] text-sm md:text-base drop-shadow-md">Ghodegaon, Jalna, MH</span>
             </div>
           </motion.div>
         </div>
@@ -410,7 +410,7 @@ export default function App() {
                 whileInView={{ opacity: 1, scale: 1, y: 0 }}
                 viewport={{ once: false, amount: 0.2 }}
                 transition={{ duration: 0.6, delay: (index % 3) * 0.1 }}
-                className="relative group overflow-hidden rounded-2xl shadow-sm hover:shadow-xl transition-all duration-500 w-full bg-stone-100 break-inside-avoid mb-16 md:mb-24"
+                className="relative group overflow-hidden rounded-xl shadow-sm hover:shadow-xl transition-all duration-500 w-full bg-stone-100 inline-block mb-4 md:mb-6"
               >
                 <div className="absolute inset-0 bg-stone-900/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10"></div>
                 <img
@@ -602,3 +602,58 @@ export default function App() {
     </div>
   );
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//  <section id="gallery" className="py-24 md:py-32 bg-white relative flex flex-col items-center justify-center w-full border-t border-stone-100">
+//         <div className="w-full max-w-6xl mx-auto px-4 sm:px-6 flex flex-col items-center">
+//           <motion.div
+//             initial={{ opacity: 0, y: 30 }}
+//             whileInView={{ opacity: 1, y: 0 }}
+//             viewport={{ once: false, amount: 0.2 }}
+//             className="flex flex-col items-center text-center mt-24 md:mt-32 mb-16 md:mb-20 w-full"
+//           >
+//             <p className="text-amber-600 uppercase tracking-[0.4em] text-xs font-semibold mb-6 md:mb-8">Memories</p>
+//             <h2 className="text-4xl md:text-5xl font-serif text-stone-800">Capturing Moments</h2>
+//           </motion.div>
+
+//           <div className="columns-2 md:columns-3 gap-4 md:gap-8 w-full">
+//             {galleryImages.map((img, index) => (
+//               <motion.div
+//                 key={index}
+//                 initial={{ opacity: 0, scale: 0.95, y: 20 }}
+//                 whileInView={{ opacity: 1, scale: 1, y: 0 }}
+//                 viewport={{ once: false, amount: 0.2 }}
+//                 transition={{ duration: 0.6, delay: (index % 3) * 0.1 }}
+//                 className="relative group overflow-hidden rounded-2xl shadow-sm hover:shadow-xl transition-all duration-500 w-full bg-stone-100 break-inside-avoid mb-16 md:mb-24"
+//               >
+//                 <div className="absolute inset-0 bg-stone-900/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10"></div>
+//                 <img
+//                   src={img}
+//                   alt={`Gallery ${index + 1}`}
+//                   loading="lazy"
+//                   className="w-full h-auto transform group-hover:scale-105 transition-transform duration-700 ease-out"
+//                 />
+//               </motion.div>
+//             ))}
+//           </div>
+//         </div>
+//       </section>
