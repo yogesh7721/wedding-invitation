@@ -255,13 +255,13 @@ export default function App() {
             className="flex flex-col sm:flex-row justify-center items-center gap-6 md:gap-12 mt-12 w-full"
           >
             <div className="flex items-center justify-center gap-3 text-white">
-              <Calendar className="text-black w-6 h-6 drop-shadow-md" />
-              <span className="text-black font-semibold tracking-[0.2em] text-sm md:text-base drop-shadow-md">07 MAY 2026</span>
+              <Calendar className="text-white w-6 h-6 drop-shadow-md" />
+              <span className="text-white font-semibold tracking-[0.2em] text-sm md:text-base drop-shadow-md">07 MAY 2026</span>
             </div>
             <div className="hidden sm:block w-[1px] h-6 bg-white/40"></div>
             <div className="flex items-center justify-center gap-3 text-white">
-              <MapPin className="text-black w-6 h-6 drop-shadow-md" />
-              <span className="text-black font-semibold tracking-[0.2em] text-sm md:text-base drop-shadow-md">Ghodegaon, Jalna, MH</span>
+              <MapPin className="text-white w-6 h-6 drop-shadow-md" />
+              <span className="text-white font-semibold tracking-[0.2em] text-sm md:text-base drop-shadow-md">Ghodegaon, Jalna, MH</span>
             </div>
           </motion.div>
         </div>
